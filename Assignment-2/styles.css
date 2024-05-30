@@ -1,0 +1,181 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0eafc, #bdc2ca);
+    color: #3b3737;
+}
+
+.loved-by-the-king-regular {
+    font-family: "Loved by the King", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    background: hsl(73, 53%, 55%);
+    color: #f3f2e5;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(175, 52, 52, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    font-size: 2.5em;
+}
+
+/* Main Content */
+main {
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #d5e5af;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.song-info {
+    background: #fdfdfb;
+    padding: 1em;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.song-info h2, .song-info h3, .song-info p {
+    margin: 0.5em 0;
+}
+
+.media {
+    text-align: center;
+}
+
+.watch {
+    margin-bottom: 2em;
+}
+
+.video-thumbnail {
+    position: relative;
+    display: inline-block;
+}
+
+.video-thumbnail img:hover {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lyrics {
+    margin: 2em 0;
+    text-align: center;
+}
+
+.images {
+    margin-top: 2em;
+}
+
+.images h1 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-container img {
+    max-width: 32%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Description of the Song */
+.description {
+    margin-top: 2em;
+    background: #e6e6fa;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(71, 14, 14, 0.1);
+}
+
+.description h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.description p {
+    text-align: justify;
+    font-family: 'Times New Roman', serif;
+}
+
+/* Additional changes */
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.zoom-in {
+    animation: zoomIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Footer */
+footer {
+    background: #b8cd5a;
+    color: #f5f0f0;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Font Styles */
+h2, h3 {
+    font-family: 'Times New Roman', serif;
+    color: #804c4c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 1em;
+    }
+
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        margin-bottom: 1em;
+    }
+}
