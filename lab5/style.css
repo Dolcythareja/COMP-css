@@ -1,0 +1,116 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial, sans-serif';
+}
+
+/* Exercise One: Fixed Header */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #eb81c2;
+    color: white;
+    padding: 10px 0;
+}
+
+/* Exercise Two: Divider Lines */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 10px 20px;
+    position: relative;
+}
+
+nav ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 1px;
+    background-color: white;
+}
+
+/* Exercise Three: Font Styles */
+h1, h2, h3, h4 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.section-one {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Exercise Six: Background Color and Clip Path */
+.section-two {
+    background-color: #f5e9f1;
+    padding: 50px 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.section-three {
+    padding: 50px 20px;
+}
+
+/* Exercise Four: Contrast */
+.section-four {
+    color: white;
+    background-image: url('background.jpg');
+    background-size: cover;
+    padding: 50px 20px;
+}
+
+/* Exercise Seven: Call to Action */
+.cta-button {
+    background-color: #330d22;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #c13b21;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Exercise Eight: Media Queries */
+@media (max-width: 1600px) {
+    /* Styles for 1600px and below */
+}
+
+@media (max-width: 1200px) {
+    /* Styles for 1200px and below */
+}
+
+@media (max-width: 1024px) {
+    /* Styles for 1024px and below */
+}
+
+@media (max-width: 768px) {
+    /* Styles for 768px and below */
+}
+
+@media (max-width: 480px) {
+    /* Styles for 480px and below */
+}
+
+@media (max-width: 320px) {
+    /* Styles for 320px and below */
+}
+
+/* Exercise Nine: Enhancement */
+@media (max-width: 550px) {
+    .section-two {
+        background-color: #d3d3d3;
+    }
+}
