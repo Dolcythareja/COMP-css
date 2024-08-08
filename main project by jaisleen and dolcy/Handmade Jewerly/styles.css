@@ -1,0 +1,965 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    background-image: url('images/background.jpg'); /* Ensure this path is correct */
+    background-size: cover;
+    background-position: center; /* Center the background image */
+    padding-top: 90px; /* Adjust this padding to match the height of the headers */
+}
+
+/* Base styles for header */
+header {
+    background: rgba(93, 148, 130, 0.5); /* Semi-transparent background for header */
+    color: #fff;
+    height: 40px; /* Height of the header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fix the header at the top */
+    top: 0;
+    left: 0; /* Align to the left */
+    width: 100%; /* Ensure header spans the full width */
+    z-index: 1000; /* Ensure header stays on top of other content */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow for separation */
+}
+
+/* Adjust Font Size in Header */
+header .logo img {
+    max-width: 30px; /* Adjust width of logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Fixed Header Navigation (Rows) */
+header nav {
+    display: flex;
+    flex-direction: row; /* Arrange nav items in rows */
+    align-items: center; /* Center align items vertically */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display nav items in a row */
+}
+
+header nav ul li {
+    margin: 0 10px; /* Adjust margin for horizontal spacing */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8em; /* Adjust font size */
+    display: block;
+    padding: 5px 10px; /* Adjust padding for better spacing */
+}
+
+header nav ul li a:hover {
+    background: #575757;
+    border-radius: 3px;
+}
+
+/* Explicitly set font size for dropdown link to match others */
+header nav ul li.dropdown .dropbtn {
+    font-size: 0.8em; /* Ensure font size matches other items */
+}
+/* Second Header Styles */
+.second-header {
+    background: rgba(56, 48, 48, 0.4); /* Semi-transparent background for second header */
+    color: #2a1dc1;
+    height: 40px; /* Height of the second header */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    position: fixed; /* Fix the header at the top */
+    top: 40px; /* Position directly below the first header */
+    left: 0; /* Align to the left */
+    width: 100%; /* Ensure header spans the full width */
+    z-index: 1001; /* Ensure header stays on top of other content but below featured products */
+    overflow: hidden; /* Hide overflow for sliding effect */
+    text-align: center; /* Center text within the header */
+}
+/* Reset margins and paddings for body */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure the second header doesn't overlap the dropdown */
+.second-header {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the dropdown */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+nav ul li .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Ensure headers have no margin or padding */
+header {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Center Text and Add Sliding Effect */
+.second-header .nav-text {
+    font-size: 1.5em; 
+    color: #fff; /* Ensure text color is readable */
+    white-space: nowrap; /* Prevent text from wrapping */
+    position: absolute; 
+    left: 50%; /* Center text horizontally */
+    transform: translateX(-50%); /* Adjust for center alignment */
+    animation: slideRight 10s linear infinite; /* Apply sliding animation */
+}
+
+/* Keyframes for Sliding Animation */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-50%) translateX(-100%); /* Start from the left end of the container */
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        transform: translateX(-50%) translateX(100%); /* Move to the right end of the container */
+        opacity: 1; /* Fully visible */
+    }
+}
+/* Ensure the second header doesn't overlap the dropdown */
+.second-header {
+    position: relative;
+    z-index: 1;
+}
+
+/* Style the dropdown */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(57, 138, 111, 0.685);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(103, 163, 145, 0.2);
+    z-index: 10;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+nav ul li .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Dropdown Menu Button */
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropbtn {
+    background: none;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1em; /* Font size to match the header links */
+    font-family: "Playfair Display", serif; /* Match font family */
+    text-decoration: none;
+}
+
+.dropdown .dropbtn:hover {
+    background: #575757;
+    border-radius: 5px;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff; 
+    color: #333; /* Dark text for readability */
+    border: 1px solid #ddd; 
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+    z-index: 1;
+    min-width: 160px; /* Minimum width of dropdown */
+    top: 100%; /* Position dropdown below the button */
+    left: 0;
+    margin-top: 5px; /* Space between button and dropdown */
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    color: #333; /* Dark text color */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f4f4f4;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Top Image */
+
+
+.top-image{
+    background-image: url("./images/background-cut.jpg");
+    background-size: cover;
+    height: 500px;
+}
+
+/* Slides Container */
+.slides {
+    position: relative;
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides-inner {
+    display: flex;
+    width: 100%; /* 100% * number of images */
+    animation: slide-animation 30s infinite;
+}
+
+.slides-item {
+    width: 100%;
+    flex: 0 0 auto;
+    height: 500px; /* Set a fixed height for the carousel */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slides-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+}
+
+/* Keyframes for sliding animation */
+@keyframes slide-animation {
+    0% {
+        transform: translateX(0);
+    }
+    16.67% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-100%);
+    }
+    36.67% {
+        transform: translateX(-100%);
+    }
+    40% {
+        transform: translateX(-200%);
+    }
+    56.67% {
+        transform: translateX(-200%);
+    }
+    60% {
+        transform: translateX(-300%);
+    }
+    76.67% {
+        transform: translateX(-300%);
+    }
+    80% {
+        transform: translateX(-400%);
+    }
+    96.67% {
+        transform: translateX(-400%);
+    }
+    100% {
+        transform: translateX(-500%);
+    }
+}
+
+
+/* Main Text Section */
+.main-text {
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.main-text h1 {
+    font-size: 3em;
+    color: rgb(2, 95, 87);
+}
+
+
+.main-text p {
+    font-size: 1.2em;
+    margin: 20px 0;
+    color: rgb(2, 85, 71);
+    position: relative;
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 5;
+    }
+}
+
+
+.main-text .cta {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.main-text .cta:hover {
+    background: #575757;
+}
+/* Video Section */
+.video-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin: 20px 0; 
+    border-radius: 10px; 
+}
+
+.video-section video {
+    max-width: 100%;
+    border-radius: 5px; /* Rounded corners for video */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+/* Featured Products */
+.featured-products {
+    padding: 20px;
+    text-align: center;
+    background-color:  rgb(237, 243, 243); 
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin: 20px 0; 
+}
+
+/* Featured Products Heading */
+.featured-products h2 {
+    margin-bottom: 20px;
+    font-family: "Playfair Display", serif; 
+    font-size: 2.5em; 
+    color: #333; 
+}
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 18px; /* Gap between product items */
+}
+
+.product-item {
+    background: #5a2727;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 21%;
+    transition: transform 0.3s ease; 
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease; 
+}
+
+.product-item:hover {
+    transform: scale(1.05); /* Zoom-in effect */
+}
+
+.product-item h3 {
+    margin: 10px 0;
+}
+
+.product-item p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.product-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.product-item a:hover {
+    color: #575757;
+}
+
+/* Featured Products */
+.featured-products {
+    padding: 20px;
+    text-align: center;
+}
+
+.featured-products h2 {
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-out;
+    color: rgb(2, 95, 87)
+
+}
+
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 18px; 
+}
+
+.product-item {
+    background: #f4f7f7;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 21%; 
+    transition: transform 0.3s ease; /* Smooth transition for effects */
+}
+
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease; 
+}
+
+.product-item:hover {
+    transform: scale(1.05); /* Zoom-in effect */
+}
+
+
+
+.product-item h3 {
+    margin: 10px 0;
+}
+
+.product-item p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.product-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.product-item a:hover {
+    color: #575757;
+}
+
+/* Product Detail */
+.product-detail {
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.product-detail .product-image {
+    max-width: 40%;
+    margin: 10px;
+    overflow: hidden; 
+    border-radius: 10px; 
+}
+
+.product-detail .product-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.product-detail .product-image img:hover {
+    transform: scale(0.9); 
+}
+
+
+.product-detail .product-info {
+    max-width: 50%;
+    margin: 10px;
+}
+
+.product-detail h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.product-detail .price {
+    font-size: 2em;
+    color: #e67e22;
+    margin-bottom: 20px;
+}
+
+.product-detail .description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.product-detail ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.product-detail ul li {
+    margin-bottom: 10px;
+}
+
+.product-detail h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.product-detail p {
+    margin-bottom: 20px;
+}
+
+.product-detail .cta {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.product-detail .cta:hover {
+    background: #575757;
+}
+
+/* About Section */
+.about {
+    padding: 50px;
+    text-align: center;
+    background-color: #c0c0c0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Headings in About Section */
+.about h1,
+.about h2 {
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 700;
+    position: relative;
+}
+
+/* Heading Sizes */
+.about h1 {
+    font-size: 2.7em;
+    animation: zoomIn 2s ease-out;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    animation: zoomIn 2s ease-out;
+}
+
+/* Paragraphs in About Section */
+.about p {
+    font-size: 1.2em;
+    color: #3f3d3d;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    animation: zoomIn 2s ease-out;
+}
+
+/* Zoom In Animation */
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Special Effect for Text */
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Gallery */
+.about-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.about-gallery img {
+    max-width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(160, 112, 112, 0.481);
+    transition: transform 0.3s ease; 
+}
+
+.about-gallery img:hover {
+    transform: rotate(5deg) scale(1.1);
+}
+
+/* FAQs Section */
+
+.about, .faqs {
+    padding: 20px;
+    margin: 10px 0;
+}
+
+
+.about h3, .faqs h3 {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.about h3:hover, .faqs h3:hover {
+    transform: scale(1.05); 
+}
+
+/* Styling for FAQ items */
+.faq {
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 4px 8px rgba(193, 168, 168, 0.748); 
+}
+/* Container for gradient background effect */
+.faqs {
+    padding: 20px;
+}
+
+/* FAQ item with gradient background shift */
+.faq {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(45deg, #abdad2, #f6f8f8c4);
+    background-size: 200% 200%;
+    border-radius: 8px;
+    padding: 15px;
+    color: #000000;
+    transition: background-position 0.5s ease;
+}
+
+.faq:hover {
+    background-position: 100% 0; 
+}
+
+/* Basic FAQ section style */
+.faqs {
+    padding: 20px;
+    background-color: #f0f8ff; 
+    border-radius: 8px; /* Rounded corners */
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.faqs h3 {
+    color: #08574a; 
+    font-size: 24px; 
+    margin-bottom: 20px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.faq {
+    background-color: #000000; 
+    border: 1px solid #000000; 
+    border-radius: 8px; 
+    padding: 15px;
+    margin-bottom: 15px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+/* Contact Form */
+.contact-main {
+    min-height: calc(100vh - 160px); 
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #c0c0c0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 10px;
+    position: relative; 
+    overflow: hidden; 
+}
+
+/* Small Image in the Right-Hand Corner */
+.contact-main .contact-image {
+    position: absolute;
+    right: 70px; 
+    top: 45%; 
+    transform: translateY(-50%); 
+    max-width: 350px; 
+    height: auto;
+    display: block;
+    z-index: 1; 
+}
+
+/* Contact Form Content */
+.contact h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact form button {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.contact form button:hover {
+    background: #575757;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 40px;
+}
+
+.contact-info h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item {
+        width: 80%;
+    }
+
+    .about-gallery img {
+        max-width: 80%;
+    }
+
+    .product-detail {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-detail .product-image,
+    .product-detail .product-info {
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .contact form {
+        max-width: 100%;
+    }
+}
+
+
+.playfair-display-main-text {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .playfair-display-featured {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .playfair-display-product {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
